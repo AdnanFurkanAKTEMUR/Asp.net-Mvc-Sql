@@ -1,0 +1,261 @@
+﻿* {
+    box-sizing:border-box;
+    padding:0px;
+    margin:0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.banner-img{
+    width: 100%;
+    height: 250px;
+    background-image: url("img/banner-img/admin.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content{
+    display: flex;
+    padding: 20px;
+}
+.left-menu{
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 5%;
+}
+.left-menu-header{
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(0, 0, 255, .8);
+    color: white;
+}
+.menu{
+
+}
+.menu-ul{
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 10px 10px;
+}
+.menu-item{
+    background-color: rgba(0, 0, 255, .3);
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+.menu-item:hover{
+    background-color: rgba(0, 0, 255, .8);
+    color: white;
+}
+.menu-item>a{
+    display:block;
+    text-decoration: none;
+    color:inherit;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.right{
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 70%;   
+}
+
+
+/*Admin kategori sayfası start*/
+.kategoriler-kategori-ekle{
+    margin-top: 20px;
+}
+.kategoriler-header{
+    background-color: green;
+    padding: 15px 15px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.goster-gizle{
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: tomato;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.kategoriler-datalist{
+    
+    margin-top: 10px;
+    display: none;
+}
+.gelen-kategori{
+    width: 1025px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.gelen-kategori:hover{
+    background-color: rgba(128, 128, 128, 0.384);
+}
+.kategoriler-icons{
+    margin-right: 20px;
+}
+.kategoriler-icons>i{
+    margin-right: 10px;
+}
+.kategoriler-icons>a{
+    text-decoration:none;
+}
+.fa-edit{
+    color: green;
+}
+.fa-trash-alt{
+    color: red;
+}
+.kategoriler-tbl{
+    width: 100%;
+    display: none;
+    background-color: rgba(128, 128, 128, 0.384);
+    padding: 30px 20px;
+}
+.kategoriler-inpt{
+    outline: none;
+    padding: 12px 12px;
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 300px;
+}
+.kategoriler-ilk-sutun{
+    text-align: right;
+}
+.kategoriler-ekle-btn{
+    outline: none;
+    border: 2px solid green;
+    border-radius: 10px;
+    background-color: rgba(0, 255, 0, .4);
+    padding: 10px;
+    margin-top: 20px;
+    width: 300px;
+    cursor: pointer;
+}
+.kategoriler-ekle-btn:hover{
+    background-color: rgba(0, 255, 0, .8);
+}
+/*Admin kategori sayfası end*/
+/*Admin kategori Detay start*/
+.kategori-detay-tabel{
+    padding: 25px;
+    font-size:1.2rem;
+    background-color:rgba(0,0,255,.4);
+    width:100%;
+}
+.kategori-detay-left{
+    text-align:right;
+    width:20%;
+    
+}
+.input{
+    padding:10px;
+    outline:none;
+    border:2px solid green;
+    border-radius:10px;
+    width:80%;
+}
+.kategori-detay-btn{
+    padding:10px;
+    outline:none;
+    border:1px solid red;
+    border-radius:10px;
+    width:80%;
+    cursor:pointer;
+    background-color:rgba(255,0,0,.5);
+    color:white;
+    font-weight:bold;
+
+}
+
+
+/*Admin kategori detay sayfası*/
+
+
+/*Admin Yemekler start*/
+.admin-yemekler-header{
+    background-color: green;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.show-btn{
+    padding: 10px;
+    outline: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.admin-yemekler-datalist{
+    width: 100%;
+}
+.yemek-ad{
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    transition: background-color .3s ease;
+}
+.yemek-ad:hover{
+    background-color: rgba(128, 128, 128, 0.445);
+}
+.yemekekle-header{
+    background-color: green;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.yemekekle-tbl{
+    width: 100%;
+}
+.ilk-td{
+    text-align: right;
+    width: 20%;
+    padding: 20px;
+}
+.yemekekle-eklebtn{
+    padding: 10px;
+    outline: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.center{
+    margin:20px 0px;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}

@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kullanici.master.cs" Inherits="YemekTarifi.Kullanici" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Kullanıcı</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="slider">
+           
+        </div>
+        <div class="nav">
+           <nav class="navbar">
+               <ul class="nav-menu">
+                   <li><a class="nav-menu-item" href="AnaSayfa.aspx">Ana Sayfa</a></li>
+                   <li><a class="nav-menu-item" href="GununYemegi.aspx">Günün Yemeği</a></li>
+                   <li><a class="nav-menu-item" href="TarifOner.aspx">Tarif Öner</a></li>
+                   <li><a class="nav-menu-item" href="Hakkimizda.aspx">Hakkımızda</a></li>
+                   <li><a class="nav-menu-item" href="Iletisim.aspx">İletişim</a></li>
+               </ul>
+           </nav>
+        </div>
+        <div class="body">
+            <div class="left-menu">
+                <div class="left-menu-header">Kategoriler</div>
+                <asp:DataList ID="DataList1" runat="server">
+                    <ItemTemplate>
+                        <ul class="category-menu">
+                            <li class="category-item">
+                                <a href="KategoriDetay.aspx?Kategoriid=<%# Eval("Kategoriid") %>">
+                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("KategoriAd") %>'></asp:Label>&nbsp;(
+                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("KategoriAdet") %>'></asp:Label>
+                                )
+                                </a>
+                            </li>
+                        </ul>
+                       
+                    </ItemTemplate>
+                </asp:DataList>
+                
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<%-- --%>

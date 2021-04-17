@@ -1,0 +1,271 @@
+﻿* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+body {
+    background-color: #ECEFF4;
+    background-image: url("img/banner-img/header4.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.slider{
+    
+    width:100%;
+    height:220px;
+    margin-bottom:20px;
+    border:1px solid grey;
+    background-image:url("img/banner-img/header1.jpg");
+    background-position:center;
+    background-size:cover;
+}
+.slider>img{
+    width:100%;
+    
+}
+.nav {
+    width: 100%;
+    background-color: green;
+    margin-bottom:20px;
+}
+.nav:hover{
+    background-color:forestgreen;
+}
+.navbar {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.nav-menu {
+    width:100%;
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    color:white;
+
+}
+.nav-menu-item {
+    background-color: green;
+    transition: background-color ease-in .81s;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+}
+.nav-menu-item:hover {
+    background-color:gold;
+}
+.body {
+    display: flex;
+    width: 100%;
+}
+.content {
+    width: 75%;
+    box-shadow:1px 1px 10px 1px black;
+    transition:box-shadow .5s ease-in-out;
+    color:white;
+}
+.content:hover {
+    box-shadow: 1px 1px 10px 3px black;
+}
+.left-menu {
+    width: 18%;
+    margin-right: 20px;
+    border:1px solid grey;
+    margin-left:10px;
+    height:500px;
+    background-color:rgba(0,0,0,.6);
+}
+
+
+.category-menu {
+    list-style: none;
+    margin-left:10px;
+}
+.category-item {
+    background-color: #AB0012;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    margin-bottom:10px;
+}
+.category-item>a{
+    text-decoration:none;
+    color:white;
+}
+.category-item:hover {
+    background-color: #8e000e;
+    box-shadow:1px 1px 5px 1px grey;
+}
+
+.left-menu-header {
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #8e000e;
+    padding:20px;
+    color:white;
+    text-align:center;
+    font-size:1.5rem;
+    cursor:default;
+}
+
+.gunun-yemegi {
+    padding: 20px 20px;
+    background-color: rgba(0,0,0,.8);
+}
+
+.gunun-yemegi-header{
+    font-size:2rem;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.gunun-yemegi-malzemeler{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:1.2rem;
+}
+
+.gunun-yemegi-img{
+    width:50%;
+}
+.yanyana-getir {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content:end;
+}
+
+.inpt{
+    outline:none;
+    padding:10px;
+    margin:10px;
+    border:1px solid green;
+    border-radius:10px;
+    width:300px;
+}
+.tbl {
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+.btn{
+    cursor:pointer;
+    background-color:green;
+    color:white;
+    font-weight:bold;
+    width:300px;
+    
+    margin-bottom:100px;
+}
+
+.anasayfa-table {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0,0,0,.7);
+}
+
+.yemek-adi {
+    text-align: center;
+    background: #8E000E;
+    color:white;
+    padding:15px 15px;
+    border-radius:10px;
+}
+
+.yemek-malzemeler {
+    padding: 15px 15px;
+    
+}
+.yemek-yapilisi {
+    padding: 15px 15px;
+}
+
+.yorumlar{
+    padding:20px 20px;
+    
+}
+.ver{
+    width:100%;
+}
+.yorum-yazar{
+    font-size:1.3rem;
+    
+    width:100%;
+    border:1px solid black;
+    padding:10px 10px;
+}
+.yorum-mesaj {
+    
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px 10px;
+}
+.yorum-tarih {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px 10px;
+    margin-bottom:30px;
+}
+.yorum-yap{
+    width:100%;
+}
+
+.baslik{
+    width:100%;
+    padding:20px 20px;
+    
+}
+.baslik>h1{
+    margin-left:25%;
+}
+
+.hakkimizda{
+    padding:30px 30px;
+}
+
+.kategori-baslik{
+    background-color:darkred;
+    padding:20px 20px;
+    color:white;
+    text-align:center;
+    font-size:1.2rem;
+}
+
+.kategori-malzeme{
+    padding:10px 10px;
+}
+.kategori-malzeme>h3 {
+    border-bottom:2px solid green;
+    margin-bottom:15px;
+}
+
+.kategori-tarif {
+    padding: 10px 10px;
+}
+.kategori-tarif > h3 {
+    border-bottom: 2px solid green;
+    margin-bottom: 15px;
+}
+.kategori-tarih{
+    padding:10px 10px;
+    border-bottom:2px solid red;
+    width:25%;
+}
+.kategori-puan {
+    padding: 10px 10px;
+    
+}

@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="YemekTarifi.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="admin.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="banner-img">
+           
+        </div>
+        <div class="content">
+            <div class="left-menu">
+                <div class="left-menu-header">MENÜ</div>
+                <div class="menu">
+                    <ul class="menu-ul">
+                        <li class="menu-item"><a href="AdminKategoriler.aspx">Kategoriler</a></li>
+                        <li class="menu-item"><a href="AdminYemekler.aspx">Yemekler</a></li>
+                        <li class="menu-item"><a href="AdminYorumlar.aspx">Yorumlar</a></li>
+                        <li class="menu-item"><a href="AdminMesajlar.aspx">Mesajlar</a></li>
+                        <li class="menu-item"><a href="AdminGununYemegi.aspx">Günün Yemeği</a></li>
+                        <li class="menu-item"><a href="AdminTarifOner.aspx">Öneriler</a></li>
+                        <li class="menu-item"><a href="AdminHakkimizda.aspx">Hakkımızda</a></li>
+                    </ul>
+
+                </div>
+                
+            </div>
+            
+        <div class="right">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+            </div>
+    </form>
+    <script src="scripts/AdminKategori.js"></script>
+</body>
+</html>
