@@ -1,0 +1,27 @@
+﻿@using StokSatisWithMVC.Models.Entity
+@model List<TBLKATEGORI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori id</th>
+        <th>Kategori adı</th>
+    </tr>
+    <tbody>
+        @foreach(var item in Model)
+            {
+        <tr>
+            <th>
+                @item.KATEGORIID
+            </th>
+            <td>
+                @item.KATEGORINAME
+            </td>
+        </tr>
+            }
+    </tbody>
+</table>
