@@ -29,5 +29,29 @@ namespace StokSatisWithMVC.Controllers
 
             return View();
         }
+
+        public ActionResult Sil(int id)
+        {
+            var kategori = db.TBLKATEGORI.Find(id);
+            db.TBLKATEGORI.Remove(kategori);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult GUNCELLE(int id)
+        {
+            var guncellenecek = db.TBLKATEGORI.Find(id);
+
+
+            return View("GUNCELLE",guncellenecek);
+        }
+
+        public ActionResult Guncellendi(TBLKATEGORI p1)
+        {
+            var ktg = db.TBLKATEGORI.Find(p1.KATEGORIID);
+            ktg.KATEGORINAME = p1.KATEGORINAME;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -34,9 +34,20 @@ namespace StokSatisWithMVC.Controllers
         [HttpPost]
         public ActionResult YeniUrunEkle(TBLURUNLER p1)
         {
+            var ktg = db.TBLKATEGORI.Where(m => m.KATEGORIID == p1.TBLKATEGORI.KATEGORIID).FirstOrDefault();
+            p1.TBLKATEGORI = ktg;
+
             db.TBLURUNLER.Add(p1);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Sil(int id)
+        {
+            var silinecek = db.TBLURUNLER.Find(id);
+            db.TBLURUNLER.Remove(silinecek);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }

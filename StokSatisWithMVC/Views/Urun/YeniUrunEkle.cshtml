@@ -1,4 +1,4 @@
-﻿@model StokSatisWithMVC.Models.Entity.TBLKATEGORI
+﻿@model StokSatisWithMVC.Models.Entity.TBLURUNLER
 @{
     ViewBag.Title = "YeniUrunEkle";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -11,7 +11,7 @@
         <label>Marka</label>
         <input type="text" class="form-control" name="MARKA" />
         <label>Kategori</label>
-        @Html.DropDownListFor(m=>m.KATEGORINAME,(List<SelectListItem>)ViewBag.dgr,new {@class="form-control"})
+        @Html.DropDownListFor(m=>m.TBLKATEGORI.KATEGORIID,(List<SelectListItem>)ViewBag.dgr,new {@class="form-control"})
         <label>Fiyat</label>
         <input type="text" class="form-control" name="FIYAT" />
         <label>Stok</label>
