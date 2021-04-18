@@ -1,0 +1,36 @@
+﻿@using StokSatisWithMVC.Models.Entity
+@model List<TBLMUSTERI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Müşteri id</th>
+            <th>Müşteri Ad</th>
+            <th>Müşteri SoyAd</th>
+            <th>Kategori sil</th>
+            <th>Kategori güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+         {
+        <tr>
+            <th>@item.MUSTERIID</th>
+            <td>@item.MUSTERIAD</td>
+            <td>@item.MUSTERISOYAD</td>
+            <td>
+                <a href="/MUSTERI/SIL/@item.MUSTERIID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/MUSTERI/GUNCELLE/@item.MUSTERIID" class="btn btn-success">GUNCELLE</a>
+            </td>
+        </tr>
+         }
+    </tbody>
+</table>
+
+<a href="/MUSTERI/YeniMusteriEkle" class="btn btn-primary">Yeni Müşteri Ekle</a>

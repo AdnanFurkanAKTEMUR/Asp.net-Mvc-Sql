@@ -1,0 +1,52 @@
+﻿@using StokSatisWithMVC.Models.Entity;
+@model List<TBLURUNLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Ürün id</th>
+        <th>Ürün Adı</th>
+        <th>Markası</th>
+        <th>Kategori</th>
+        <th>Fiyat</th>
+        <th>Stok</th>
+        <th>Kategori sil</th>
+        <th>Kategori güncelle</th>
+    </tr>
+    <tbody>
+        @foreach(var item in Model)
+         {
+        <tr>
+            <th>
+                @item.URUNID
+            </th>
+            <td>
+                @item.URUNAD
+            </td>
+            <td>
+                @item.MARKA
+            </td>
+            <td>
+                @item.URUNKATEGORI
+            </td>
+            <td>
+                @item.FIYAT
+            </td>
+            <td>
+                @item.STOK
+            </td>
+            <td>
+                <a href="/URUN/SIL/@item.URUNID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/URUN/GUNCELLE/@item.URUNID" class="btn btn-success">GUNCELLE</a>
+            </td>
+        </tr>
+         }
+    </tbody>
+</table>
+
+<a href="/URUN/YeniUrunEkle" class="btn btn-primary">Yeni Ürün Ekle</a>

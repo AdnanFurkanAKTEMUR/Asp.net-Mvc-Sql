@@ -7,24 +7,25 @@ using StokSatisWithMVC.Models.Entity;
 
 namespace StokSatisWithMVC.Controllers
 {
-    public class KategoriController : Controller
+    public class MusteriController : Controller
     {
+        // GET: Musteri
         Dbo_MvcStokEntities db = new Dbo_MvcStokEntities();
         public ActionResult Index()
         {
-            var degerler = db.TBLKATEGORI.ToList();
+            var degerler = db.TBLMUSTERI.ToList();
             return View(degerler);
         }
         [HttpGet]
-        public ActionResult YeniKategori()
+        public ActionResult YeniMusteriEkle()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult YeniKategori(TBLKATEGORI p1)
+        public ActionResult YeniMusteriEkle(TBLMUSTERI p1)
         {
-            db.TBLKATEGORI.Add(p1);
+            db.TBLMUSTERI.Add(p1);
             db.SaveChanges();
 
             return View();

@@ -1,0 +1,24 @@
+﻿@model StokSatisWithMVC.Models.Entity.TBLKATEGORI
+@{
+    ViewBag.Title = "YeniUrunEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Ürün Adı</label>
+        <input type="text" class="form-control" name="URUNAD" />
+        <label>Marka</label>
+        <input type="text" class="form-control" name="MARKA" />
+        <label>Kategori</label>
+        @Html.DropDownListFor(m=>m.KATEGORINAME,(List<SelectListItem>)ViewBag.dgr,new {@class="form-control"})
+        <label>Fiyat</label>
+        <input type="text" class="form-control" name="FIYAT" />
+        <label>Stok</label>
+        <input type="text" class="form-control" name="STOK" />
+    </div>
+    <div>
+        <button style="margin-top:15px" class="btn btn-info">Kaydet</button>
+    </div>
+</form>
+
