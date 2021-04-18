@@ -25,6 +25,10 @@ namespace StokSatisWithMVC.Controllers
         [HttpPost]
         public ActionResult YeniMusteriEkle(TBLMUSTERI p1)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("YeniMusteriEkle");
+            }
             db.TBLMUSTERI.Add(p1);
             db.SaveChanges();
 

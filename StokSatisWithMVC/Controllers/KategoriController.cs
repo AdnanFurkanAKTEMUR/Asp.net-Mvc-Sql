@@ -24,9 +24,14 @@ namespace StokSatisWithMVC.Controllers
         [HttpPost]
         public ActionResult YeniKategori(TBLKATEGORI p1)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("YeniKategori");
+         
+            }
             db.TBLKATEGORI.Add(p1);
             db.SaveChanges();
-
+               
             return View();
         }
 

@@ -11,7 +11,8 @@ namespace StokSatisWithMVC.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLURUNLER
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,12 +22,24 @@ namespace StokSatisWithMVC.Models.Entity
         }
     
         public int URUNID { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz.")]
         public string URUNAD { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz.")]
         public string MARKA { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz.")]
         public Nullable<int> URUNKATEGORI { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz.")]
         public Nullable<decimal> FIYAT { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz.")]
         public Nullable<int> STOK { get; set; }
-    
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz.")]
+
         public virtual TBLKATEGORI TBLKATEGORI { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLSATIS> TBLSATIS { get; set; }

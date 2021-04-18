@@ -1,13 +1,18 @@
-﻿
+﻿@model StokSatisWithMVC.Models.Entity.TBLKATEGORI
 @{
     ViewBag.Title = "YeniKategori";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
 <form class="form-group" method="post">
-    <div>
+    @*<div>
         <label>Kategori Adı</label>
         <input type="text" class="form-control" name="KATEGORINAME"/>
+    </div>*@
+    <div>
+        <label>Kategori Adı</label>
+        @Html.TextBoxFor(m=>m.KATEGORINAME,new {@class="form-control"})
+        @Html.ValidationMessageFor(m=>m.KATEGORINAME,"",new { @style = "color:red" })
     </div>
     <div>
         <button style="margin-top:15px" class="btn btn-info">Kategori Ekle</button>
