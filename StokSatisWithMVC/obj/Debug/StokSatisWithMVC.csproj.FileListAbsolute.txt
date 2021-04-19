@@ -88,3 +88,7 @@ C:\Users\adnan\source\repos\StokSatisWithMVC\obj\Debug\StokSatisWithMVC.csproj.C
 C:\Users\adnan\source\repos\StokSatisWithMVC\obj\Debug\StokSatisWithMVC.csproj.CopyComplete
 C:\Users\adnan\source\repos\StokSatisWithMVC\obj\Debug\StokSatisWithMVC.dll
 C:\Users\adnan\source\repos\StokSatisWithMVC\obj\Debug\StokSatisWithMVC.pdb
+C:\Users\adnan\source\repos\StokSatisWithMVC\bin\PagedList.dll
+C:\Users\adnan\source\repos\StokSatisWithMVC\bin\PagedList.Mvc.dll
+C:\Users\adnan\source\repos\StokSatisWithMVC\bin\PagedList.xml
+C:\Users\adnan\source\repos\StokSatisWithMVC\bin\PagedList.Mvc.xml

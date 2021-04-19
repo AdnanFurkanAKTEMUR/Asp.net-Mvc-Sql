@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using StokSatisWithMVC.Models.Entity;
 
+
+
 namespace StokSatisWithMVC.Controllers
 {
     public class UrunController : Controller

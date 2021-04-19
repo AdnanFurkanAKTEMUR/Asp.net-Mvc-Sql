@@ -1,6 +1,7 @@
 ﻿@using StokSatisWithMVC.Models.Entity
-@model List<TBLKATEGORI>
-
+@model PagedList.IPagedList<TBLKATEGORI>
+@using PagedList;
+@using PagedList.Mvc; 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -33,5 +34,6 @@
             }
     </tbody>
 </table>
+@Html.PagedListPager((IPagedList)Model,sayfa=>Url.Action("Index",new {sayfa}))
 
 <a href="/KATEGORI/YeniKategori/" class="btn btn-primary">Yeni Kategori Ekle</a>
