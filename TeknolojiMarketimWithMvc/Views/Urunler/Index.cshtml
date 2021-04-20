@@ -1,0 +1,30 @@
+﻿@using TeknolojiMarketimWithMvc.Models.Entity;
+@model List<TBLURUNLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="flex">
+
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="@item.URUNRESIM" height="250" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">@item.URUNAD</h5>
+                <p class="card-text">@item.URUNBILGI</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Marka: @item.URUNMARKA</li>
+                <li class="list-group-item">Model: @item.URUNAD</li>
+                <li class="list-group-item">Fiyat: @item.FIYAT ₺</li>
+                <li class="list-group-item">Fiyat: @item.STOK</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="btn btn-primary">İncele</a>
+                
+            </div>
+        </div>
+    }
+</div>

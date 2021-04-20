@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cfe67f62928a48a38b16153c025cb686" Name="Diagram1">
+        <EntityTypeShape EntityType="Dbo_EticaretModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Dbo_EticaretModel.TBLKATEGORI" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Dbo_EticaretModel.TBLMUSTERI" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Dbo_EticaretModel.TBLSATINALIM" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Dbo_EticaretModel.TBLURUNLER" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Dbo_EticaretModel.TBLYORUM" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="Dbo_EticaretModel.FK_TBLURUNLER_TBLKATEGORI" ManuallyRouted="false" />
+        <AssociationConnector Association="Dbo_EticaretModel.FK_TBLSATINALIM_TBLMUSTERI1" ManuallyRouted="false" />
+        <AssociationConnector Association="Dbo_EticaretModel.FK_TBLSATINALIM_TBLURUNLER" ManuallyRouted="false" />
+        <AssociationConnector Association="Dbo_EticaretModel.FK_TBLYORUM_TBLURUNLER" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

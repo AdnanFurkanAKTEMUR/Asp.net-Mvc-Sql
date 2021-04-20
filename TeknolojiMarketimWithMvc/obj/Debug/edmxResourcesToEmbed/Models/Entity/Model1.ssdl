@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Dbo_EticaretModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TBLKATEGORI">
+    <Key>
+      <PropertyRef Name="KATEGORIID" />
+    </Key>
+    <Property Name="KATEGORIID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KATEGORIAD" Type="varchar" MaxLength="50" />
+    <Property Name="KATEGORIRESIM" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TBLMUSTERI">
+    <Key>
+      <PropertyRef Name="MUSTERIID" />
+    </Key>
+    <Property Name="MUSTERIID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MUSTERIAD" Type="varchar" MaxLength="50" />
+    <Property Name="MUSTERISOYAD" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLSATINALIM">
+    <Key>
+      <PropertyRef Name="SATINALIMID" />
+    </Key>
+    <Property Name="SATINALIMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SATILANURUN" Type="int" />
+    <Property Name="SATINALANMUSTERI" Type="int" />
+  </EntityType>
+  <EntityType Name="TBLURUNLER">
+    <Key>
+      <PropertyRef Name="URUNID" />
+    </Key>
+    <Property Name="URUNID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="URUNAD" Type="varchar" MaxLength="50" />
+    <Property Name="URUNMARKA" Type="varchar" MaxLength="50" />
+    <Property Name="URUNKATEGORI" Type="int" />
+    <Property Name="FIYAT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="STOK" Type="int" />
+    <Property Name="URUNBILGI" Type="varchar" MaxLength="500" />
+    <Property Name="URUNRESIM" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TBLYORUM">
+    <Key>
+      <PropertyRef Name="YORUMID" />
+    </Key>
+    <Property Name="YORUMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YORUMBASLIK" Type="varchar" MaxLength="100" />
+    <Property Name="YORUMMETIN" Type="varchar" MaxLength="500" />
+    <Property Name="YORUMYAZAN" Type="varchar" MaxLength="50" />
+    <Property Name="YORUMMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="YORUNURUN" Type="int" />
+  </EntityType>
+  <Association Name="FK_TBLSATINALIM_TBLMUSTERI1">
+    <End Role="TBLMUSTERI" Type="Self.TBLMUSTERI" Multiplicity="0..1" />
+    <End Role="TBLSATINALIM" Type="Self.TBLSATINALIM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLMUSTERI">
+        <PropertyRef Name="MUSTERIID" />
+      </Principal>
+      <Dependent Role="TBLSATINALIM">
+        <PropertyRef Name="SATINALANMUSTERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSATINALIM_TBLURUNLER">
+    <End Role="TBLURUNLER" Type="Self.TBLURUNLER" Multiplicity="0..1" />
+    <End Role="TBLSATINALIM" Type="Self.TBLSATINALIM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLURUNLER">
+        <PropertyRef Name="URUNID" />
+      </Principal>
+      <Dependent Role="TBLSATINALIM">
+        <PropertyRef Name="SATILANURUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLURUNLER_TBLKATEGORI">
+    <End Role="TBLKATEGORI" Type="Self.TBLKATEGORI" Multiplicity="0..1" />
+    <End Role="TBLURUNLER" Type="Self.TBLURUNLER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKATEGORI">
+        <PropertyRef Name="KATEGORIID" />
+      </Principal>
+      <Dependent Role="TBLURUNLER">
+        <PropertyRef Name="URUNKATEGORI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLYORUM_TBLURUNLER">
+    <End Role="TBLURUNLER" Type="Self.TBLURUNLER" Multiplicity="0..1" />
+    <End Role="TBLYORUM" Type="Self.TBLYORUM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLURUNLER">
+        <PropertyRef Name="URUNID" />
+      </Principal>
+      <Dependent Role="TBLYORUM">
+        <PropertyRef Name="YORUNURUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Dbo_EticaretModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLKATEGORI" EntityType="Self.TBLKATEGORI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLMUSTERI" EntityType="Self.TBLMUSTERI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLSATINALIM" EntityType="Self.TBLSATINALIM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLURUNLER" EntityType="Self.TBLURUNLER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLYORUM" EntityType="Self.TBLYORUM" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLSATINALIM_TBLMUSTERI1" Association="Self.FK_TBLSATINALIM_TBLMUSTERI1">
+      <End Role="TBLMUSTERI" EntitySet="TBLMUSTERI" />
+      <End Role="TBLSATINALIM" EntitySet="TBLSATINALIM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSATINALIM_TBLURUNLER" Association="Self.FK_TBLSATINALIM_TBLURUNLER">
+      <End Role="TBLURUNLER" EntitySet="TBLURUNLER" />
+      <End Role="TBLSATINALIM" EntitySet="TBLSATINALIM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLURUNLER_TBLKATEGORI" Association="Self.FK_TBLURUNLER_TBLKATEGORI">
+      <End Role="TBLKATEGORI" EntitySet="TBLKATEGORI" />
+      <End Role="TBLURUNLER" EntitySet="TBLURUNLER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLYORUM_TBLURUNLER" Association="Self.FK_TBLYORUM_TBLURUNLER">
+      <End Role="TBLURUNLER" EntitySet="TBLURUNLER" />
+      <End Role="TBLYORUM" EntitySet="TBLYORUM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
