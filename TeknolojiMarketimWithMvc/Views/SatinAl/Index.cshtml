@@ -1,0 +1,56 @@
+﻿@model List<TeknolojiMarketimWithMvc.Models.Entity.TBLURUNLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<button class="tablink" onclick="openPage('Kayitli', this, 'rgba(0, 255, 0, .95)')" id="defaultOpen">Sistemde Kayıtlıyım</button>
+<button class="tablink" onclick="openPage('NotKayitli', this, 'rgba(0, 255, 0, .95)')" >Sistemde Kayıtlı değilim</button>
+
+
+<div id="Kayitli" style="margin-top:20px" class="tabcontent">
+    @foreach (var i in Model)
+    {
+        <img src="@i.URUNRESIM" height="100" width="100" />
+        <br />
+        <label>Ürün Adı: <b>@i.URUNAD</b></label>
+        <br />
+        <label>Markası: <b>@i.URUNMARKA</b></label><br />
+        <label>Fiyatı: <b style="color:red">@i.FIYAT Tl</b></label><br />
+        <label>Stok Durumu: <b>@i.STOK</b></label><br />
+        <label>Ürün hakkında: <b>@i.URUNBILGI</b></label><br />
+    }
+    <form class="form-group" method="post" style="margin-top:20px">
+        <label>Müşteri ID</label>
+        <input class="form-control" type="number" required name="musteriid" />
+        <input type="number" value="@Model[0].URUNID" style="visibility:hidden" name="urunid"/>
+        <button style="margin-top:20px" class="btn btn-danger">Satın Alma işlemini Bitir</button>
+    </form>
+</div>
+
+<div id="NotKayitli" class="tabcontent">
+    <h3>News</h3>
+    <p>Some news this fine day!</p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+    
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+

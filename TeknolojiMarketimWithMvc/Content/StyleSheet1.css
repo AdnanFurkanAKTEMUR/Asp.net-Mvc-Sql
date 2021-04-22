@@ -82,3 +82,18 @@
 .mb-100 {
     margin-bottom: 100px
 }
+
+
+#urunid{
+    visibility:hidden;
+}
+
+.tablink{
+    outline:none;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background-color:rgba(0,0,255,.8);
+    color:white;
+    margin-top:100px;
+}

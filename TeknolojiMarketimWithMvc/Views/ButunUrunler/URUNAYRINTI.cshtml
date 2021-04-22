@@ -21,7 +21,7 @@
             <li class="list-group-item">Fiyat: @item.STOK</li>
         </ul>
         <div class="card-body">
-            <a href="#" class="btn btn-success">Satın Al</a>
+            <a href="/SatinAl/Index/@item.URUNID" class="btn btn-success">Satın Al</a>
 
         </div>
     </div>
@@ -42,7 +42,7 @@
                 {
                     <div class="comment-widgets">
                         <div class="d-flex flex-row comment-row">
-                            <div class="p-2"><span class="round"><img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359554__340.png" alt="user" width="50"></span></div>
+                            <div class="p-2"><span class="round"><img src="https://www.beyoglu.net/galeri/wp-content/uploads/2020/08/Yavru-Kedi-Foto.jpg" alt="user" width="50"></span></div>
                             <div class="comment-text w-100">
                                 <h5>@item.YORUMYAZAN</h5>
                                 <h6>@item.YORUMBASLIK</h6>
@@ -71,9 +71,8 @@
         <input type="text" class="form-control" required="" name="YORUMBASLIK" />
         <label>Yorum</label>
         <input type="text" class="form-control" required="" name="YORUMMETIN" />
-        <label>Ürün id</label>
-        <input type="text" class="form-control" value="@Model.urun[0].URUNID" name="YORUNURUN" />
-
+        
+        <input type="text" id="urunid" class="form-control" value="@Model.urun[0].URUNID" name="YORUNURUN" />
     </div>
     <div>
         <button style="margin-top:15px" class="btn btn-info">Kaydet</button>

@@ -42,37 +42,8 @@ namespace TeknolojiMarketimWithMvc.Controllers
             return RedirectToAction("Index");
         }
 
-        /*
-        public ActionResult UrunAyrintilari(int urunId)
-        {
-
-            var urun = db.TBLURUNLER.Where(m => m.URUNID == urunId).ToList();
-            var yorum = db.TBLYORUM.Where(m => m.YORUNURUN == urunId).ToList();
-            var urunViewModel = new UrunViewModel
-            {
-                urun = urun,
-                yorumlar = yorum
-            };
 
 
-            return View ("UrunAyrintilari",urunViewModel);
-        }
-
-
-        
-        /*public ActionResult UrunAyrintilari(TBLYORUM p1)
-        {
-            db.TBLYORUM.Add(p1);
-            db.SaveChanges();
-            /*var urun = db.TBLURUNLER.Where(m => m.URUNID == p1.YORUNURUN).ToList();
-            var yorum = db.TBLYORUM.Where(m => m.YORUNURUN == p1.YORUNURUN).ToList();
-            var urunViewModel = new UrunViewModel
-            {
-                urun = urun,
-                yorumlar = yorum
-            };
-            return View(urunViewModel);
-            return RedirectToAction("Index");
-        }*/
+       
     }
 }

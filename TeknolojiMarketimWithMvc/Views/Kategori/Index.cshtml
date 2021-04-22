@@ -4,18 +4,20 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+<br />
+<br />
 
     @foreach (var item in Model)
     {
-    <div class="card mb-3">
-        <img src="@item.KATEGORIRESIM" height="350px" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title">@item.KATEGORIAD</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <a href="/Urunler/Index/@item.KATEGORIID" class="btn btn-info">Ürünlere Git</a>
+        <div class="card mb-3">
+            <img src="@item.KATEGORIRESIM" height="350" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">@item.KATEGORIAD</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <a href="/Urunler/Index/@item.KATEGORIID" class="btn btn-info">Ürünlere Git</a>
+            </div>
         </div>
-    </div>
     }
+
     
    
-<
