@@ -233,7 +233,7 @@
     <Content Include="Views\ButunUrunler\Index.cshtml" />
     <Content Include="Views\AnaSayfa\Index.cshtml" />
     <Content Include="Views\Yardim\Index.cshtml" />
-    <Content Include="Views\ButunUrunler\UrunAyrintilari.cshtml" />
+    <Content Include="Views\ButunUrunler\URUNAYRINTI.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
