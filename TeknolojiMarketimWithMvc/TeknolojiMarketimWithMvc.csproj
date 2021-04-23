@@ -135,6 +135,7 @@
     <Compile Include="Controllers\SatinAlController.cs" />
     <Compile Include="Controllers\SatinAlimController.cs" />
     <Compile Include="Controllers\UrunlerController.cs" />
+    <Compile Include="Controllers\UyeOlController.cs" />
     <Compile Include="Controllers\YardimController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -241,6 +242,7 @@
     <Content Include="Views\SatinAlim\SatinAlimAyrintilar.cshtml" />
     <Content Include="Views\SatinAl\Index.cshtml" />
     <Content Include="Views\SatinAl\Thx.cshtml" />
+    <Content Include="Views\UyeOl\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
